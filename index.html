@@ -1,0 +1,630 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Kathmandu | Home </title>
+	<link rel = "icon" href ="images/icon.png">
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+
+
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+		
+	<style>
+		*{
+
+			box-sizing: border-box;
+			margin:0;
+			font-family: arial;
+			
+		}
+
+
+			.column{
+				position: fixed;
+				top:0;
+				width:100%;
+				left: 0;
+				z-index: 1;
+				background: #00e0cb;
+			}
+
+			button.visit {
+    				background: #ffffff00;
+    				border: 2px solid #fff;
+    				padding: 10px 60px;
+    				font-size: 1em;
+				outline: none;
+    				top: 67%;
+    				right: 52%;
+    				color: white;
+    				position: absolute;
+    				border-radius: 20px;
+    				cursor: pointer;
+			}
+
+			.navigation a {
+    				text-decoration: none;
+				color: white;
+				font-size: 18px;
+				font-family: arial;
+				font-family: 'Raleway', sans-serif;
+				padding: 12px 22px;
+			}
+			.navigation a:hover{
+				background: #cccccc52;
+
+			}
+			.navigation{
+				background: #000;
+				padding: 15px;
+				z-index: 1;
+			}
+			.modal{
+		  		position: fixed;
+		  		width: 100%;
+		  		height: 100%;
+		  		background: rgba(0,0,0,0.4);
+		  		overflow: auto;
+		  		z-index: 1;
+		  		top: 0;
+		  		left: 0;
+	    	  		padding-top: 100px;
+		  		display: none;
+
+			}	
+			form{
+				width:50%;
+				margin: auto;
+    				background: #000;
+    				border: 1px solid #ccc;
+			}	
+			.container {
+		  		padding: 30px;
+			}
+
+			.header {
+		  		text-align: center;
+		  		position: relative;
+			}
+
+			.close {
+		  		position: absolute;
+		  		top: 0px;
+		  		right: 10px;
+		  		color: #fff;	
+		  		font-size: 24px;		
+		  		font-weight: bold;
+		  		cursor: pointer;
+
+			}
+			
+		.visit {
+		  width: auto;
+		}
+		.animate {
+		  animation: zoomeffect 0.5s;
+		}
+
+		@keyframes zoomeffect {
+
+			from {
+			   transform: scale(0);
+
+
+			}
+			to {
+			   transform: scale(1);
+
+			}
+
+		}
+
+		input[type="search"] {
+    			width: 35%;
+    			position: absolute;
+    			padding: 10px;
+    			top: 65%;
+    			right: 30%;
+			outline: none;
+			border: none;
+			color: white;
+			text-align: center;
+			background: #ffffff4a;
+		}
+		::placeholder{
+			color:white;
+			font-family: 'Raleway', sans-serif;
+			font-size: 15px;
+			text-align: center;
+		}
+		button.search {
+    			padding: 10px;
+    			background: red;
+    			border: none;
+    			position: absolute;
+    			top: 65%;
+    			right: 28%;
+		}
+
+		button.visits {
+    			width: 100%;
+    			background: #13ff13;
+    			padding: 11px;
+    			border: none;
+			font-size:20px;
+    			color: white;
+		}
+		.fa{
+			padding: 30px;
+		}
+
+		.quality{
+			text-align: center;
+			padding: 50px;
+		}
+		i.fa.fa-medkit {
+    			background: #673ab7;
+			font-size: 40px;
+			color: white;
+			border-radius: 50%;
+		}
+		i.fa.fa-h-square {
+    			background: #e91e63;
+    			font-size: 40px;
+    			color: white;
+			border-radius: 50%;
+		}
+		i.fa.fa-graduation-cap {
+    			background: black;
+			font-size: 35px;
+			color: white;
+			border-radius: 50%;
+		}
+		i.fa.fa-bed {
+    			background: green;
+    			color: white;
+    			border-radius: 50%;
+    			font-size: 40px;
+		}
+		i.fa.fa-bus {
+    			background: red;
+    			color: white;
+    			border-radius: 50%;
+    			font-size: 38px;
+		}
+		i.fa.fa-plane {
+    			background: #03a9f4;
+    			border-radius: 50%;
+    			font-size: 40px;
+    			color: white;
+		}
+		i.fa.fa-motorcycle {
+    			background: aquamarine;
+    			color: white;
+    			border-radius: 50%;
+    			font-size: 40px;
+		}
+		i.fa.fa-film {
+    			background: black;
+    			color: white;
+    			border-radius: 50%;
+    			font-size: 40px;
+		}
+		h1 {
+    			position: absolute;
+    			top: 45%;
+    			color: white;
+    			font-size: 3.5em;
+    			right: 30%;
+		}
+		p {
+    			color: white;
+    			position: absolute;
+    			top: 60%;
+    			right: 50%;
+    			background: black;
+		}
+		.form input, .contact input {
+			border: 1px solid white;
+    			width: 100%;
+    			padding: 20px;
+    			border-left: none;
+   	 		outline: none;
+    			border-top: none;
+    			border-right: none;
+			background: #ffffff00;
+			font-size: 17px;
+			color: white;
+		}
+
+		.history{
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+
+		button.read {
+    			width: 40%;
+    			border: none;
+    			padding: 10px;
+    			color: white;
+    			background: #D57763;
+    			position: absolute;
+    			right: 50%;
+			font-size: 16px;
+	
+		}
+		button.more{
+			padding: 12px;
+			width: 50%;
+			background: #D57763;
+			border: none;
+			color: white;
+			font-size: 20px;
+
+		}
+		.contact{
+			background: black;
+			text-align: center;
+			padding: 10%;
+		}
+		h3{
+			color: white;
+			font-size: 1.7em;
+		}
+		textarea {
+    			width: 100%;
+    			border: 1px solid white;
+    			background: black;
+    			color: white;
+			text-align: center;
+			outline: none;
+			border-radius: 10px;
+		}
+		button.submit {
+    			width: 100%;
+    			border: 1px solid white;
+    			background: black;
+    			color: white;
+			font-size: 20px;
+    			padding: 12px;
+			cursor: pointer;
+		}
+		button.submit:hover{
+			background: #D57763;
+		}
+
+		.fixed-bg {
+  			background-image: url(images/boudha.png);
+  			background-attachment: fixed;
+			height: 300px;
+			background-position: center;
+		}
+
+		h4{
+			font-family: 'Quicksand', sans-serif;
+		}
+		.places{
+			text-align: center;
+		}		
+		pre{
+			font-size: 30px;
+		}
+		h6 {
+    			position: absolute;
+    			top: 20%;
+    			color: white;
+			font-size: 16px;
+    			right: 50%;
+			font-family: 'Raleway', sans-serif;
+		}
+		a{
+			text-decoration: none;
+		}
+			
+		h5 {
+    			position: absolute;
+    			top: 20%;
+    			color: white;
+    			right: 20%;
+		}
+		h2.popular{
+			text-align: center;
+		}
+		.footer{
+			background: #D57763;
+			padding: 7%;
+			display: flex;
+    			justify-content: space-evenly;
+			justify-content: space-around;
+		}
+		.footer a{
+			color: white;
+			font-family: 'Raleway', sans-serif;
+		}
+		h2.link{
+			color: white;
+			font-family: 'Raleway', sans-serif;
+			font-size:20px;
+		}	
+		.connect, .fa{
+			color: white;
+
+		}
+		i.fa.fa-instagram:hover {
+    			color: #ff4181;
+		}
+		i.fa.fa-facebook:hover{
+			color: #13aef5;
+		}
+		i.fa.fa-linkedin:hover {
+    			color: #0875cc;
+		}
+		i.fa.fa-twitter:hover {
+    			color: #2196f3;
+		}
+		ul , li{
+			list-style: none;
+			color: white;
+		}
+		.copy {
+    			text-align: center;
+			font-family: 'Raleway', sans-serif;
+			background: #D57763;
+		}
+		.copy{
+			color: white;
+		}
+		input[type="email"] {
+    			width: 25%;
+    			padding: 10px;
+    			border: none;
+    			outline: none;
+		}
+		button {
+    			border: none;
+    			padding: 10px;
+    			background: red;
+    			color: white;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="row ">
+	
+	    <div class="column">
+		
+		<img src="images/ktm.png"> <h6> Email: salinmanbania1234@gmail.com</h6> <h5> Contact: 9840297322 </h5>
+		<input type="search" placeholder="type.." name="search"><button class="search"> Serach </button>
+	    <div class="navigation">
+
+		<a href="#facility"> Facilities </a>
+		<a href="#contact"> Contact </a>
+		<a href="#history"> History </a>
+		<a href="#places"> Places </a>
+	   </div>
+	    </div>							
+		<img src="images/boudha.jpg"width="100%">
+
+	</div>
+
+	<h1> Capital Of Nepal </h1>
+	<p> - Nepal's biggest city</p>	
+
+
+		<div class="des">
+
+<button class="visit" id="visit"> Visit </button>
+
+</div>
+
+<div class="modal" id="modal">
+
+	<form class="animate">
+
+		<div class="container header">
+			<span class="close" id="close">&times;</span>
+		<div class="form">
+		<h2> Visit Form </h2>
+		<br>
+
+			<input type="text"placeholder="Enter Nmae" name="name">
+
+
+			<input type="text"placeholder=" Phone Number" name="number">
+
+
+			<input type="date"placeholder=" Date" name="date">
+
+			<br><br>
+			<button class="visits" id="num"> Visit </div>
+		</div>
+			
+		</div>
+
+		
+
+	</form>
+
+
+  </div>
+
+	
+	<div class="quality" id="facility">
+
+	<br><br><br><br>
+		<h2> Facilities </h2>
+		<br><br>
+		<i class="fa fa-medkit" aria-hidden="true"></i>	&nbsp	&nbsp		&nbsp	&nbsp
+		<i class="fa fa-h-square" aria-hidden="true"></i>	&nbsp	&nbsp	&nbsp	&nbsp
+		<i class="fa fa-graduation-cap" aria-hidden="true"></i>	&nbsp	&nbsp	&nbsp	&nbsp
+		<i class="fa fa-bed" aria-hidden="true"></i>		&nbsp	&nbsp	&nbsp	&nbsp
+		<i class="fa fa-bus" aria-hidden="true"></i>		&nbsp	&nbsp	&nbsp	&nbsp
+		<i class="fa fa-plane" aria-hidden="true"></i>		&nbsp	&nbsp	&nbsp	&nbsp<br><br>
+		<i class="fa fa-motorcycle" aria-hidden="true"></i>	&nbsp	&nbsp	&nbsp	&nbsp
+		<i class="fa fa-film" aria-hidden="true"></i>		&nbsp	&nbsp	&nbsp	&nbsp
+		<br><br><br><br>
+		<button class="more"> Find More </button>
+		<br>	
+
+	</div>
+	
+	<div class="fixed-bg" id="history"></div><br>
+		<pre> History of Kathmandu </pre>
+		<div class="history"id="history">
+	
+    		<div class="text">
+		<h4>	In recent years, Kathmandu has experienced a turbulent history<br>
+			 and political instability, marred by outbreaks of violence and protests<br>
+	 		which have often caused considerable damage to buildings or caused <br>
+			loss of lives. On June 1, 2001, a gruesome royal massacre occurred when<br>
+			the Crown Prince Dipendra gunned down his immediate family consisting<br>
+	 		of his father King Birendra, his mother Queen Aishvarya, his brother and<br>
+	 		sister, and also five of his relatives at the Narayanhiti Royal Palace. 
+			The Licchavis<br> from the Indo-Gangetic plain migrated north and defeated the Kiratas, <br>establishing the Licchavi dynasty, circa 400 AD.
+		</h4>
+    </div>
+
+     <div class="photo">
+	<br>
+	<img src="images/history.jpg">
+	
+   </div>
+	</div>
+	
+	<a href="https://en.wikipedia.org/wiki/Kathmandu"><button class="read"> Read More</button></a>
+
+		<br><br>
+		
+		<div class="contact" id="contact">
+			
+			<h3> Contacu Us </h3>
+
+			<input type="text" placeholder=" Enter Your Name" name="name">
+
+
+		<br><br>
+
+			<input type="email" placeholder=" Example@gmail.com" name="email">
+
+		<br><br>
+
+			<textarea rows="15" cols="210" placeholder="Messege .."></textarea>
+
+		<br><br>
+
+			<button class="submit"> Submit </button>
+
+		</div>
+		<img src="images/add.gif"width="100%">
+		<br><br>
+			<h2 class="popular"> Most Popular places </h2>
+  		<br>
+		 <div class="places" id="places">
+
+			<img src="images/1.jpg"width="510">
+			<img src="images/2.jpg"width="750">
+			<img src="images/3.jpg"width="400">
+			<img src="images/plane.jpg"width="500">
+			<img src="images/5.jpg"width="350">
+			<img src="images/4.jpg"width="100%">
+	
+		</div>
+		
+		<div class="footer">
+
+		
+	
+			<div class="links">
+			     <h2 class="link"> Uesful Links </h2>
+				<hr><br>		
+				<a href="#facility"> Facilities </a><br><br>
+				<a href="#contact"> Contact </a><br><br>
+				<a href="#"> Visit </a><br><br>
+				<a href="#history"> History </a>
+			</div>
+			
+			<div class="connect">
+			       <h2 class="link"> Find us </h2>	
+			            <hr>	
+				<i class="fa fa-facebook"></i><br>	
+				<i class="fa fa-instagram"></i><br>
+				<i class="fa fa-linkedin"></i><br>
+				<i class="fa fa-twitter"></i>	
+				
+			</div>
+
+			<div class="team">
+			        <h2 class="link"> Our Team </h2>	
+				<hr>
+			<br>
+				   <ul>
+					<li> <a href="https://www.facebook.com/mohankarki.1234">Mohan Karki </a></li><br>
+					<li> <a href="https://www.facebook.com/sparrow.webmaker">Bastola Budha </a></li><br>
+					<li> <a href="">Prem Shahi </a></li><br>
+					<li> <a href="">Bishnu Bogati </a></li><br>
+					<li> <a href="https://www.facebook.com/dilip.neupane.35513">Dinesh Neupane </a></li><br>
+					<li> <a href="">Lokendra Shahi </a></li>
+
+				   </ul>
+			</div>
+
+
+			<div class="location">
+  				<h2 class="link">Where we are?  </h2>	
+				<hr>
+				<br>
+				<a href="https://www.google.com/maps/d/viewer?msa=0&mid=1YeV-CBqH1wi1X9q1UyoHyl-5ais"><img src="images/location.jpg" width="400"></a>
+
+			</div>
+		
+	   	</div>
+		<hr>
+	<div class="copy"><br>
+		subscribe us<br><br>
+		<input type="email" placeholder="username@gmail.com"><button>Subscribe</button><br><br>
+		&copy; All right reserved Kathmandu 2021 
+		
+		<br><br>
+	</div>
+
+
+	
+
+
+	<script>
+
+		document.getElementById("visit").addEventListener("click", function(){
+			
+			document.getElementById("modal").style.display = "block";
+
+		});
+
+
+		document.getElementById("num").addEventListener("click", function(){
+			
+			document.getElementById("modal").style.display = "none";
+
+		});
+
+
+
+
+	</script>
+
+	
+</body>
+
+
+</html>
